@@ -21,7 +21,7 @@ server {
     }
 }
 
-# node服务器http-proxy-middleware模块设置代
+# node http-proxy-middleware模块设置代
 const proxy = require('http-proxy-middleware');//引入代理中间件
 app.use('/api', proxy({
     target: "http://localhost:8001",
