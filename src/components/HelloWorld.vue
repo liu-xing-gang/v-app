@@ -1,12 +1,20 @@
 <template>
     <div class="hello">
         <cube-button @click="showDialog"></cube-button>
+        <ul>
+            <li v-for="(item, index) in arr" :key="index">{{typeof item}}</li>
+        </ul>
     </div>
 </template>
 
 <script>
 export default {
     name: "HelloWorld",
+    data() {
+        return {
+            arr: []
+        };
+    },
     props: {
         msg: String
     },
@@ -22,7 +30,8 @@ export default {
     mounted() {
         /* eslint-disable */
         this.$http.get("/api/test").then(res => {
-            console.log(res.body);
+            this.$set(this, "arr", res.body);
+            console.log(this.arr);
         });
     }
 };
