@@ -1,5 +1,4 @@
 # v-app
-vue-cli3.0 webpack 跨域
 
 ## 跨域解决
 # nginx配置反向代理
