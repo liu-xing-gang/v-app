@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import HelloWorld from "@/components/HelloWorld";
+import Test from "@/components/Test";
 import VueResource from "vue-resource";
 
 Vue.use(Router);
@@ -14,6 +15,11 @@ const router = new Router({
       path: "/",
       name: "",
       component: HelloWorld
+    },
+    {
+      path: "/test",
+      name: "test",
+      component: Test
     }
   ]
 });
